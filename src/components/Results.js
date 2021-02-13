@@ -43,9 +43,9 @@ const Results = () => {
                 Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
             },
             params: {
-                location: "new york city",
+                location: "1401 mckinney st",
                 term: 'coffee',
-                limit: 25
+                limit: 5
             }
         })
         .then(response => {
