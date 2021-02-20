@@ -1,16 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
-// import './index.css';
+// import reportWebVitals from './reportWebVitals';
+
+// componenets imports
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// CSS imports
+import { Flex, ChakraProvider } from "@chakra-ui/react"
+// ChakraProvider adds ThemeProvider, ColorModeProvider, and GlobalStyle automatically - cleaner setup
+// optional via propr: CSSReset, PortalManager
+
 var cors = require('cors')
 require('dotenv').config()
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <ChakraProvider>
+    <Flex direction="column" align="center" justify="center">
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Flex>
+    </ChakraProvider>,
   document.getElementById('root')
 );
 

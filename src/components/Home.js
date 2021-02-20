@@ -81,7 +81,7 @@ const Home = () => {
             </ul>
 
             <form onSubmit={handleSubmit}>
-                <div class="input-field">
+                <div className="input-field">
                     <input 
                         type="text" 
                         placeholder="enter location" 
