@@ -15,6 +15,11 @@ feb 20
 
 feb 21
 * yelp search in homepage works (remember to cors-anywhere and allow it to work temporarily)
+* testing if the useEffect can run when it updates based on a change in `location` rather than `searchTerm` because the latter takes too many requests
+* it did render into the results page (but the wrong cafe data, but images loaded, etc)
+* the main issue seems to be that it cannot set the location, but somehow able to set the searchTerm
+* if this takes too long, figure out auth and then go back and use dummy data (or a hardcoded location to pull results for example/presentation purposes)
+* TOO MANY REQUESTS YELP API
 
 components (view)
 * home
