@@ -38,7 +38,7 @@ const Login = () => {
                 hover={{ boxShadow: "md" }}
                 active={{ boxShadow: "lg" }}
                 >
-                    sign up
+                    login
                 </Button>
             </Stack>
         </form>

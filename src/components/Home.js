@@ -11,50 +11,50 @@ const Home = () => {
     const [cafes, setCafes] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
     const [searchResults, setSearchResults] = useState([])
-    const [searchLocation, setSearchLocation] = useState("")
+    const [location, setLocation] = useState("")
 
     // useEffect to get all cafes as response - based on location search
-    useEffect(()=>{
-        axios
-            .get(cors+'https://api.yelp.com/v3/businesses/search',
-            {headers: {
-                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-            },
-            params: {
-                location: `${searchLocation}`,
-                term: "coffee",
-                limit: 5
-            }
-            })
-            .then(response=>{
-                console.log("response:", response.data.businesses)
-                setCafes(response.data.businesses)
-            })
-            .catch(error=>{
-                console.log(error)
-            })
-    }, [searchLocation])
-
-    // const submitSearch = event => {
+    // useEffect(()=>{
     //     axios
-    //     .get(cors+'https://api.yelp.com/v3/businesses/search',
-    //     {headers: {
-    //         Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-    //     },
-    //     params: {
-    //         location: `${searchLocation}`,
-    //         term: "coffee",
-    //         limit: 5
-    //     }
-    //     })
-    //     .then(response=>{
-    //         console.log("response:", response.data.businesses)
-    //         setCafes(response.data.businesses)
-    //     })
-    //     .catch(error=>{
-    //         console.log(error)
-    //     })
-    // }
+    //         .get(cors+'https://api.yelp.com/v3/businesses/search',
+    //         {headers: {
+    //             Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+    //         },
+    //         params: {
+    //             location: `${searchLocation}`,
+    //             term: "coffee",
+    //             limit: 5
+    //         }
+    //         })
+    //         .then(response=>{
+    //             console.log("response:", response.data.businesses)
+    //             setCafes(response.data.businesses)
+    //         })
+    //         .catch(error=>{
+    //             console.log(error)
+    //         })
+    // }, [searchLocation])
+
+    const submitSearch = event => {
+        axios
+        .get(cors+'https://api.yelp.com/v3/businesses/search',
+        {headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+        },
+        params: {
+            location: `${searchTerm}`,
+            categories: "coffee",
+            limit: 5
+        }
+        })
+        .then(response=>{
+            console.log("response:", response.data.businesses)
+            setCafes(response.data.businesses)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
 
     const handleChange = event => {
         setSearchTerm(event.target.value)
@@ -64,8 +64,11 @@ const Home = () => {
     const handleSubmit = event => {
         event.preventDefault()
         console.log("searchTerm after submit:", searchTerm)
-        setSearchLocation(searchTerm)
-        console.log("search location after submit:", searchLocation)
+        console.log("location before setting:", location)
+        // setSearchLocation not working (?) - didnt work when manually put a city in
+        setLocation(searchTerm)
+        console.log("search location after submit:", location)
+        submitSearch()
     }
 
 

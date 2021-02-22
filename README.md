@@ -13,6 +13,9 @@ feb 11
 feb 20
 * added chakra
 
+feb 21
+* yelp search in homepage works (remember to cors-anywhere and allow it to work temporarily)
+
 components (view)
 * home
 * register
@@ -42,3 +45,4 @@ to-do
 * any user can search and view cafes
 * alert to login or redirect to login if they try to add to favorites
 * allow clicking a result and having the specific cafe info pop out
+* have the search results render in a new page with cafe cards
