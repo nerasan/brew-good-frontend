@@ -5,28 +5,24 @@ const CafeContainer = (props) => {
 
     return (
 
-        <div class="cafe-card">
+        <div id={props.id} className="cafe-card">
             viewing info for {props.name}
             <div class="image">
-                <img class="cafe-image" src={props.image} />
+                <img class="cafe-image" src={props.image} width="500" />
             </div>
             <div class="cafe-info">
-                {props.address}
-                {props.city}
-                {props.state}
+                {props.address}<br />
+                {props.city}, {props.state}<br />
                 {props.phone}
             </div>
             <div class="yelp-info">
-                {props.price}
-                {props.rating}
-                {props.url}
+                {props.price}<br />
+                rating: {props.rating}<br />
+                <a href={props.url}>view on yelp</a>
             </div>
-
         </div>
 
     )
-    
-
 }
 
 export default CafeContainer

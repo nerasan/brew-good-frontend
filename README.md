@@ -20,9 +20,14 @@ feb 21
 * the main issue seems to be that it cannot set the location, but somehow able to set the searchTerm
 * if this takes too long, figure out auth and then go back and use dummy data (or a hardcoded location to pull results for example/presentation purposes)
 * TOO MANY REQUESTS YELP API
+* consider having a homepage that leads to a page to search and then results render within that page (so no need for redirecting - might solve setlocation case because it can be based on location or search results change?)
+
+feb 22
+* added a defaultCafes api call for useEffect purposes in the show page
 
 components (view)
 * home
+* show cafes
 * register
 * log in
 * cafe list - render list of cafe from search
@@ -51,3 +56,4 @@ to-do
 * alert to login or redirect to login if they try to add to favorites
 * allow clicking a result and having the specific cafe info pop out
 * have the search results render in a new page with cafe cards
+

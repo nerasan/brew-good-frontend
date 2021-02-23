@@ -5,7 +5,7 @@ import Layout from './components/common/Layout'
 import Home from './components/Home'
 import Register from './components/Register'
 import Login from './components/Login'
-import Results from './components/Results'
+import Cafes from './components/Cafes'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route exact path={["/", "/home"]} component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/results" component={Results} />
+        <Route exact path="/cafes" component={Cafes} />
       </Switch>
     </Layout>
   );
