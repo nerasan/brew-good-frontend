@@ -76,26 +76,6 @@ const Cafes = () => {
         getDefaultCafes()
     }, [])
 
-    // const redirectFunction = (state) => {
-    //     history.push({
-    //         pathname: '/results',
-    //         state: {
-    //             results: cafes,
-    //             location: location
-    //         }
-    //     })
-    // }
-
-    // const handleSubmit = event => {
-    //     event.preventDefault()
-    //     console.log("searchTerm after submit:", searchTerm)
-    //     console.log("location before setting:", location)
-    //     // setSearchLocation not working (?) - didnt work when manually put a city in
-    //     setLocation(searchTerm)
-    //     console.log("search location after submit:", location)
-    //     submitSearch()
-    // }
-
     return (
         <>
             <h1>cafe show page</h1>
@@ -141,65 +121,3 @@ const Cafes = () => {
 }
 
 export default Cafes;
-
-
-
-
-
-    // const [didMount, setDidMount] = useState(false)
-
-    // useEffect(()=>{
-    //     setDidMount(true)
-    //     return () => setDidMount(false)
-    // }, [])
-
-    // if(!didMount) {
-    //     return null
-    // }
-
-    // useEffect to get all cafes as response - based on location search
-    // useEffect(()=>{
-    //     axios
-    //         .get(cors+'https://api.yelp.com/v3/businesses/search',
-    //         {headers: {
-    //             Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-    //         },
-    //         params: {
-    //             location: `${searchLocation}`,
-    //             term: "coffee",
-    //             limit: 5
-    //         }
-    //         })
-    //         .then(response=>{
-    //             console.log("response:", response.data.businesses)
-    //             setCafes(response.data.businesses)
-    //         })
-    //         .catch(error=>{
-    //             console.log(error)
-    //         })
-    // }, [searchLocation])
-
-
-
-
-
-                {/* result = (a === 'abc') ? (bb === 'def') ? amd = 'hello' :
-                         (bb === 'ghi') ? amd = 'hai' : amd = 'Hurray' :
-                     (a === 'que') ? (aaa === 'ddd') ? amd = 'Hurray Hi' : amd = 'Hurray Bye' : 
-                     'default result was missing from your statment'; */}
-{/* 
-            {loading === false ? (
-                <div>
-                    loading...
-                </div>
-            ) : (
-                <>
-                    <h3>results of search limited to 5 (2 for testing)</h3>
-                    <ul>
-                        {cafes.map(each=>{
-                            <li key={each.id}>{each.name}</li>
-                        })}
-                    </ul>
-                </>
-            ) } */}
-

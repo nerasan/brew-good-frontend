@@ -24,6 +24,8 @@ feb 21
 
 feb 22
 * added a defaultCafes api call for useEffect purposes in the show page
+* results come up but need to look into why setCafes/set any state doesn't work right away but when calling `cafes` in the results it shows up
+* wrote auth codes to connect frontend to backend for register/login - register not working through form
 
 components (view)
 * home
