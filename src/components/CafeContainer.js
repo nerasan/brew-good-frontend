@@ -34,7 +34,7 @@ const CafeContainer = (props) => {
 
                 <Box p="6">
                     <Box d="flex" alignItems="baseline">
-                        <a href={props.url}>
+                        <a href={props.url} target="_blank">
                             <Badge borderRadius="full" px="2" colorScheme="yellow">
                                 yelp
                             </Badge>
