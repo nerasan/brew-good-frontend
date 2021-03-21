@@ -1,19 +1,26 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import { Container, Flex, Spacer, Box, Heading, Button } from "@chakra-ui/react"
 
 const Layout = (props) => {
     return (
         <>
-            <div>
-                <ul>
-                    <li><a href="/">home</a></li>
-                    <li><a href="/register">sign up</a></li>
-                    <li><a href="/login">login</a></li>
-                </ul>
-            </div>
-
-            <div>
-                {props.children}
-            </div>
+            <Box>
+                <Box w="500px" />
+                    <Flex>
+                        <Link to="/">
+                            <Heading size="md">brew good.</Heading>
+                        </Link>
+                    
+                    <Spacer />
+                    
+                        <Link to="/register"><Button colorScheme="yellow" size="sm" width="100px" mr="4">register</Button></Link>
+                        <Link to="/login"><Button colorScheme="yellow" size="sm" width="100px" mr="4">login</Button></Link>
+                    </Flex>
+                </Box>
+                <Box>
+                    {props.children}
+                </Box>
         </>
 
     )

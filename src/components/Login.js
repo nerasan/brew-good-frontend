@@ -1,10 +1,18 @@
 import React from 'react'
-import { Box, useColorMode, Stack, Input, FormControl, InputGroup, InputLeftElement, Icon, Button, Divider, FormHelperText } from "@chakra-ui/react"
+import { Heading, Stack, HStack, VStack, StackDivider, Box, useColorMode, Input, FormControl, InputGroup, InputLeftElement, Icon, Button, Divider, FormHelperText } from "@chakra-ui/react"
 
 const Login = () => {
     const { colorMode } = useColorMode()
     return (
-        <Box w="350px" bg={colorMode === "light" ? "gray.200" : "gray.600" } p={3} boxShadow="sm" rounded="lg">
+
+        <VStack>
+
+        <Box h="25px"></Box>
+            <Heading>log in</Heading>
+        <Box h="25px"></Box>
+
+
+        <Box w="350px" bg={colorMode === "light" ? "yellow.100" : "yellow.600" } p={3} boxShadow="sm" rounded="lg">
 
         <form action="submit">
             <Stack spacing={4}>
@@ -37,6 +45,7 @@ const Login = () => {
                 boxShadow="sm"
                 hover={{ boxShadow: "md" }}
                 active={{ boxShadow: "lg" }}
+                colorScheme="yellow"
                 >
                     login
                 </Button>
@@ -44,6 +53,7 @@ const Login = () => {
         </form>
 
         </Box>
+        </VStack>
     )
 }
 

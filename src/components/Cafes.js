@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import CafeContainer from './CafeContainer'
 import axios from 'axios'
+import { Grid, GridItem, HStack, Box, Heading, Button, Center, VStack, FormControl, InputGroup, Input } from '@chakra-ui/react'
 
-const cors = "https://cors-anywhere.herokuapp.com/"
+// const cors = "https://cors-anywhere.herokuapp.com/"
+const cors= "https://intense-wave-48972.herokuapp.com/"
 
 const Cafes = () => {
 
@@ -54,7 +56,7 @@ const Cafes = () => {
         params: {
             location: `${searchTerm}`,
             categories: "coffee",
-            limit: 2
+            limit: 15
         }
         })
         .then((response) => {
@@ -78,44 +80,74 @@ const Cafes = () => {
 
     return (
         <>
-            <h1>cafe show page</h1>
+        <VStack>
+            <Box h="25px"></Box>
+                <Heading>find a cafe near you</Heading>
+            <Box h="25px"></Box>
 
             {loading ? 
+            <>
                 <div className="home-container">
+            
                 <form onSubmit={handleSubmit}>
-                    <div className="input-field">
+                    {/* <div className="input-field">
                         <input 
                             type="text" 
                             placeholder="enter location" 
                             value={searchTerm} 
                             onChange={handleChange}
                             />
-                    </div>
-                    <button type="submit" name="action" onClick={handleSubmit}>search</button>
+                    </div> */}
+
+                    <FormControl>
+                        <InputGroup>
+                        <Input 
+                            placeholder="enter your location" 
+                            aria-label="search" 
+                            value={searchTerm} 
+                            onChange={handleChange}>
+                        </Input>
+                        </InputGroup>
+                    </FormControl>
+                    <Box h="20px"></Box>
+                    <Center>
+                    <Button colorScheme="yellow" type="submit" name="action" onClick={handleSubmit}>search</Button>
+                    </Center>
+                    <Box h="20px"></Box>
                 </form>
-            </div>  
+            </div> 
+            </> 
             :
             <div>
                 loading...
             </div> }
 
             {searchComplete ?
-            <div className="home-container">
-                search complete. showing results. (limited to 2 for testing)
-
-                <div className="cafe-container">
-
+            <Box>
+                <Center>
+                <Heading>
+                    viewing results in {searchTerm}
+                </Heading>
+                </Center>
+                <Center>
+                <Box h="20px"></Box>
+                </Center>
+                <Center>
+                <Grid templateColumns="repeat(6, 1fr)" gap={4}>
                 {cafes.map(each => {
-                    return <CafeContainer name={each.name} image={each.image_url} address={each.location.address1} city={each.location.city} state={each.location.state} zip={each.location.zip_code} phone={each.display_phone} price={each.price} rating={each.rating} url={each.url} id={each.id}/>
+                    return <GridItem colSpan={2}>
+                    <CafeContainer name={each.name} image={each.image_url} address={each.location.address1} city={each.location.city} state={each.location.state} zip={each.location.zip_code} phone={each.display_phone} price={each.price} rating={each.rating} url={each.url} id={each.id}/>
+                    </GridItem>
                 })}
-
-                </div>
-
-            </div>
+                </Grid>
+                </Center>
+            </Box>
             : 
             <div>
-                enter a location to find cafes near you!
+                
             </div> }
+            
+        </VStack>
         </>
     )
 }

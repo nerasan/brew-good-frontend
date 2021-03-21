@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Box, useColorMode, Stack, Input, FormControl, InputGroup, InputLeftElement, Icon, Button, Divider, FormHelperText } from "@chakra-ui/react"
+import { Heading, Stack, HStack, VStack, StackDivider, Box, useColorMode, Input, FormControl, InputGroup, InputLeftElement, Icon, Button, Divider, FormHelperText, extendTheme } from "@chakra-ui/react"
 import { register } from '../services/auth.service'
 
 // need to set up validators later for username, email, password
@@ -67,7 +67,13 @@ const Register = () => {
 
     return (
 
-        <Box w="350px" bg={colorMode === "light" ? "gray.200" : "gray.600" } p={3} boxShadow="sm" rounded="lg">
+        <VStack>
+
+        <Box h="25px"></Box>
+            <Heading>create account</Heading>
+        <Box h="25px"></Box>
+
+        <Box w="350px" bg={colorMode === "light" ? "yellow.100" : "yellow.600" } p={3} boxShadow="sm" rounded="lg">
 
         <form onSubmit={handleSignup}>
             <Stack spacing={4}>
@@ -152,6 +158,7 @@ const Register = () => {
                 boxShadow="sm"
                 hover={{ boxShadow: "md" }}
                 active={{ boxShadow: "lg" }}
+                colorScheme="yellow"
                 >
                     sign up
                 </Button>
@@ -159,6 +166,7 @@ const Register = () => {
         </form>
 
         </Box>
+        </VStack>
     )
 }
 
