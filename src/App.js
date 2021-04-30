@@ -11,7 +11,7 @@ import Featured from './components/Featured'
 
 function App() {
   return (
-    <Box>
+    <Box w="1000px" p={4} borderWidth="1px">
     <Layout>
       <Switch>
         <Route exact path={["/", "/home"]} component={Home} />

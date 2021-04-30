@@ -66,7 +66,7 @@ const Home = () => {
         </Stack>
 
         <Center mb={4}>
-            <Link to="/donate">
+            <Link to="/featured">
                 <Button
                     type="submit"
                     colorScheme="yellow"
