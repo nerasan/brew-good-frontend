@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Register from './components/Register'
 import Login from './components/Login'
 import Cafes from './components/Cafes'
+import Featured from './components/Featured'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/cafes" component={Cafes} />
+        <Route exact path="/featured" component={Featured} />
       </Switch>
     </Layout>
     </Box>

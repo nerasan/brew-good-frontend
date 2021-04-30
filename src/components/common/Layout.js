@@ -14,8 +14,8 @@ const Layout = (props) => {
                     
                     <Spacer />
                     
-                        <Link to="/register"><Button colorScheme="yellow" size="sm" width="100px" mr="4">register</Button></Link>
-                        <Link to="/login"><Button colorScheme="yellow" size="sm" width="100px" mr="4">login</Button></Link>
+                        <Link to="/cafes"><Button colorScheme="yellow" size="sm" width="100px" mr="4">search.</Button></Link>
+                        <Link to="/featured"><Button colorScheme="yellow" size="sm" width="100px" mr="4">featured.</Button></Link>
                     </Flex>
                 </Box>
                 <Box>

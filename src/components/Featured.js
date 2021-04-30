@@ -4,15 +4,15 @@ import { Button } from '@chakra-ui/react'
 import axios from "axios"
 import { Heading, Center, Spacer } from "@chakra-ui/react"
 
-const cors = "https://cors-anywhere.herokuapp.com/"
+// const cors = "https://cors-anywhere.herokuapp.com/"
 
-const Home = () => {
+const Featured = () => {
 
 
     return (
         <>
         <Center h="100px">
-            <Heading>grab a cup for a cause</Heading>
+            <Heading>featured charity</Heading>
         </Center>
         <Center><img src="https://image.freepik.com/free-vector/woman-enjoying-cup-coffee_188398-127.jpg" /></Center>
         <Center>
@@ -22,7 +22,7 @@ const Home = () => {
                     colorScheme="yellow"
                     mt={4}
                     >
-                        find a cup of coffee near you
+                        visit cafe website
                     </Button>
             </Link>
         </Center>
@@ -33,7 +33,7 @@ const Home = () => {
                     colorScheme="yellow"
                     mt={4}
                     >
-                        learn more
+                        visit charity website
                     </Button>
             </Link>
         </Center>
@@ -43,4 +43,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Featured;
