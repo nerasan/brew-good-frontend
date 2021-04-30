@@ -5,7 +5,7 @@ import { Container, Flex, Spacer, Box, Heading, Button } from "@chakra-ui/react"
 const Layout = (props) => {
     return (
         <>
-            <Box>
+            <Box mt={2}>
                 <Box w="500px" />
                     <Flex>
                         <Link to="/">
