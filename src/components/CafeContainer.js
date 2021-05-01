@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Badge, StarIcon, Image, Center, VStack } from '@chakra-ui/react'
+import { Box, Badge, Image } from '@chakra-ui/react'
 // import edit/delete routes here if the buttons will be here
 
 const CafeContainer = (props) => {

@@ -27,35 +27,29 @@ feb 22
 * results come up but need to look into why setCafes/set any state doesn't work right away but when calling `cafes` in the results it shows up
 * wrote auth codes to connect frontend to backend for register/login - register not working through form
 
+apr 30
+* updated homepage to have featured coffee shop
+* added featured page for more details on featured coffee shop
+* added footer
+* updates to layout/styling
+
+### components
+
 components (view)
 * home
-* show cafes
-* register
-* log in
-* cafe list - render list of cafe from search
-* cafe container - each cafe card/info
-* user profile
-* favorites form
-* favorites card - render all of the user's favorites on their profile
-* edit
+* cafes
+* cafe container
+* featured
 
 components/common
 * layout
-* formgroup - if needed
-* buttonspinner
+
+### debug & stretch goals
 
 notes/to debug
-* need to configure how to get current user with flask
-* also for the purposes of the layout view depending if logged in or not
-* user to search based by location (city, address, etc.) not lat/lon
-* might try to add "nonprofit" in the search term `term` along with `coffee` since that is how it is searched on yelp? cannot do attributes but nonprofit is not in here anyway
-* 403 forbidden error with yelp api?
-* FormHelperText gives a useStyles error
+* look into free ways to limit search for "nonprofit" - seems to only be more pro developers
 
-to-do
-* login/register pages and connecting to backend
-* any user can search and view cafes
-* alert to login or redirect to login if they try to add to favorites
-* allow clicking a result and having the specific cafe info pop out
-* have the search results render in a new page with cafe cards
+stretch goals
+* add fonts via chakra ui
+* login/register for users to have favorites
 

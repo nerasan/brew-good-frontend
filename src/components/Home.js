@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@chakra-ui/react'
-import axios from "axios"
+// import axios from "axios"
 import { Box, Heading, Center, Stack, Text } from "@chakra-ui/react"
 
-const cors = "https://cors-anywhere.herokuapp.com/"
+// const cors = "https://cors-anywhere.herokuapp.com/"
 
 const Home = () => {
 
@@ -46,7 +46,11 @@ const Home = () => {
             </Center>
 
             <Center>
-                <Heading mt={10} as="h3" size="lg">
+            <img src="https://www.seekpng.com/png/full/24-240655_png-divider-lines-transparent-divider-lines-page-separator.png" width="500px" />
+            </Center>
+
+            <Center>
+                <Heading mt={0} as="h3" size="lg">
                     featured cafe
                 </Heading>
             </Center>
@@ -65,18 +69,16 @@ const Home = () => {
 
         </Stack>
 
-        <Center mb={4}>
+        <Center>
             <Link to="/featured">
                 <Button
                     type="submit"
                     colorScheme="yellow"
-                    mt={4}
                     >
                         learn more
                     </Button>
             </Link>
         </Center>
-
 
         </>
     )
