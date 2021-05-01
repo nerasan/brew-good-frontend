@@ -1,6 +1,10 @@
 # brew good: frontend
 
-### update log
+## landing page
+
+![brew good landing page](public/brew-good-landing.png)
+
+## update log
 
 feb 10
 * created react app and installed dependencies
@@ -33,7 +37,7 @@ apr 30
 * added footer
 * updates to layout/styling
 
-### components
+## components
 
 components (view)
 * home
@@ -44,7 +48,7 @@ components (view)
 components/common
 * layout
 
-### debug & stretch goals
+## debug & stretch goals
 
 notes/to debug
 * look into free ways to limit search for "nonprofit" - seems to only be more pro developers
