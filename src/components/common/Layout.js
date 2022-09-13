@@ -39,25 +39,31 @@ const Layout = (props) => {
                          <Stack>
                              <Stack direction="row" spacing="4" align="center" justify="space-between">
                                  <HStack>
-                                    <img src="https://icons-for-free.com/iconfiles/png/512/colored+hot+drink-1319964985173450614.png" width="25px" />
-                                    <Text>brew good</Text>
+                                    {/* <img src="https://icons-for-free.com/iconfiles/png/512/colored+hot+drink-1319964985173450614.png" width="25px" />
+                                    <Text>brew good</Text> */}
+                                    <Text fontSize="sm" alignSelf={{
+                                        base: 'center',
+                                        sm: 'start'
+                                    }}>
+                                    &copy; {new Date().getFullYear()} brew good. all rights reserved.
+                            </Text>
                                 </HStack>
 
                                  <HStack>
                                     {/* about page link - to uncomment when created */}
                                     {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/About_icon_%28The_Noun_Project%29.svg/1200px-About_icon_%28The_Noun_Project%29.svg.png" alt="about page icon" width="25px" /> */} 
+{/* 
+                                    <a href="https://salima.netlify.app" target="_blank"><img src="https://image.flaticon.com/icons/png/512/43/43500.png" alt="portfolio icon" width="25px" /></a> */}
 
-                                    <a href="https://salima.netlify.app" target="_blank"><img src="https://image.flaticon.com/icons/png/512/43/43500.png" alt="portfolio icon" width="25px" /></a>
-
-                                    <a href="https://github.com/nerasan" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github icon" width="25px" /></a></HStack>
+                                    <a href="https://github.com/nerasan" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github icon" width="25px" /></a></HStack>
 
                              </Stack>
-                             <Text fontSize="sm" alignSelf={{
+                             {/* <Text fontSize="sm" alignSelf={{
                                  base: 'center',
                                  sm: 'start'
                              }}>
                                 &copy; {new Date().getFullYear()} brew good. all rights reserved.
-                            </Text>
+                            </Text> */}
                          </Stack>
 
                 </Box>
